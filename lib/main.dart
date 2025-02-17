@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                               "ED.ENG",
                               // textAlign: TextAlign.left,
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 184, 43, 43),
+                                  color: Color.fromARGB(255, 255, 255, 255),
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "JollyLodger",
                                   fontSize: 50),
