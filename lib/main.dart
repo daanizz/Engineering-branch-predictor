@@ -53,30 +53,30 @@ class MyApp extends StatelessWidget {
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               "ED.ENG",
                               // textAlign: TextAlign.left,
                               style: TextStyle(
                                   color: Color.fromARGB(255, 255, 255, 255),
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "JollyLodger",
-                                  fontSize: 50),
+                                  fontSize: screenWidth * .045),
                             ),
                             const Spacer(),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(25),
                               child: Image.asset(
                                 'img/Preview.jpg',
-                                width: 80,
-                                height: 80,
+                                width: screenWidth * .1,
+                                height: screenHeight * .1,
                                 fit: BoxFit.cover,
                               ),
                             )
                           ])),
-                  const SizedBox(
-                    height: 200,
+                  SizedBox(
+                    height: screenHeight * .05,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       // Expanded(child: Container()),
@@ -86,14 +86,14 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: "JollyLodger",
-                            fontSize: 30),
+                            fontSize: screenWidth * .025),
                       ),
                       // Expanded(child: Container()),
                     ],
                   ),
 
-                  const SizedBox(
-                    height: 50,
+                  SizedBox(
+                    height: screenHeight * .15,
                   ),
                   // const Spacer(),
                   Row(
@@ -110,12 +110,14 @@ class MyApp extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                              minimumSize: const Size(120, 55),
+                              minimumSize: Size(
+                                  (screenWidth * .06).clamp(30, 32),
+                                  (screenHeight * .03).clamp(30, 32)),
                               foregroundColor: Colors.white,
                               backgroundColor: Colors.blueGrey,
-                              textStyle: const TextStyle(
+                              textStyle: TextStyle(
                                 fontFamily: "JollyLodger",
-                                fontSize: 30,
+                                fontSize: (screenWidth * .04).clamp(10, 32),
                               ),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
