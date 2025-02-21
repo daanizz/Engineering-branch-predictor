@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
                       ),
                       alignment: Alignment.centerLeft,
                       width: screenWidth,
-                      height: screenHeight * .175,
+                      height: (screenWidth * .2).clamp(15, 100),
                       padding: const EdgeInsets.only(left: 32, right: 34),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,24 +57,25 @@ class MyApp extends StatelessWidget {
                               "ED.ENG",
                               // textAlign: TextAlign.left,
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  color:
+                                      const Color.fromARGB(255, 255, 255, 255),
                                   fontWeight: FontWeight.bold,
                                   fontFamily: "JollyLodger",
-                                  fontSize: screenWidth * .045),
+                                  fontSize: (screenWidth * .07).clamp(20, 60)),
                             ),
                             const Spacer(),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(25),
                               child: Image.asset(
                                 'img/Preview.jpg',
-                                width: screenWidth * .1,
-                                height: screenHeight * .1,
+                                width: (screenWidth * .12).clamp(15, 100),
+                                height: (screenWidth * .10).clamp(15, 100),
                                 fit: BoxFit.cover,
                               ),
                             )
                           ])),
                   SizedBox(
-                    height: screenHeight * .05,
+                    height: screenHeight * .08,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -86,14 +87,14 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: "JollyLodger",
-                            fontSize: screenWidth * .025),
+                            fontSize: (screenWidth * .045).clamp(16, 32)),
                       ),
                       // Expanded(child: Container()),
                     ],
                   ),
 
                   SizedBox(
-                    height: screenHeight * .15,
+                    height: screenHeight * .2,
                   ),
                   // const Spacer(),
                   Row(
@@ -110,18 +111,19 @@ class MyApp extends StatelessWidget {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                              minimumSize: Size(
-                                  (screenWidth * .06).clamp(30, 32),
-                                  (screenHeight * .03).clamp(30, 32)),
-                              foregroundColor: Colors.white,
-                              backgroundColor: Colors.blueGrey,
-                              textStyle: TextStyle(
-                                fontFamily: "JollyLodger",
-                                fontSize: (screenWidth * .04).clamp(10, 32),
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              )),
+                            minimumSize:
+                                Size((screenWidth * .12), (screenHeight * .02)),
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.blueGrey,
+                            textStyle: TextStyle(
+                              fontFamily: "JollyLodger",
+                              fontSize: (screenWidth * .05).clamp(18, 36),
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            elevation: 5,
+                          ),
                           child: const Text('Test')),
                       Expanded(child: Container()),
                     ],
