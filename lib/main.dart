@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
                     Color.fromARGB(255, 3, 23, 103)
                   ])),
               // color: Colors.greenAccent,
-
               child: Column(
                 //starts from top to bottom in a column.
                 crossAxisAlignment:
